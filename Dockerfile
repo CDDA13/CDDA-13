@@ -45,7 +45,7 @@ FROM dm_base as build
 
 COPY . .
 
-RUN DreamMaker -max_errors 0 tgmc.dme && tools/deploy.sh /deploy
+RUN DreamMaker -max_errors 0 cdda13.dme && tools/deploy.sh /deploy
 
 FROM dm_base
 

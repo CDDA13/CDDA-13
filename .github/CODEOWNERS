@@ -3,17 +3,7 @@
 # This list is alphabetized by User -> Filename KEEP IT THAT WAY
 # In the event that multiple org members are to be informed of changes
 # to the same file or dir, add them to the end under Multiple Owners
+# Example below:
 
-# PsyKzz
-/code/datum/gamemodes/ @psykzz
-
-# KwinOriginal
-/_maps/ @KwinOriginal
-
-# TheBimmer231
-/icons/ @TheBimmer231
-
-# spookydonut
-/code/datums/supplypacks.dm @spookydonut
-/code/modules/shuttle/ @spookydonut
-/code/controllers/subsystem/points.dm @spookydonut
+# Test
+# /code/datum/gamemodes/ @Test

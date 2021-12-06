@@ -6,7 +6,7 @@ import numpy as np
 
 
 def generate_raw_file(path):
-    os.system(f'sdmmparser.exe ../../tgmc.dme {path}')
+    os.system(f'sdmmparser.exe ../../cdda13.dme {path}')
 
 
 def parse_file(path):
