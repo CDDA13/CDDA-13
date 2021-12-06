@@ -26,12 +26,12 @@
 		},
 		{
 			"type": "dreammaker",
-			"dme": "tgmc.dme",
+			"dme": "cdda13.dme",
 			"problemMatcher": [
 				"$dreammaker"
 			],
 			"group": "build",
-			"label": "dm: build - tgmc.dme"
+			"label": "dm: build - cdda13.dme"
 		},
 		{
 			"type": "shell",
