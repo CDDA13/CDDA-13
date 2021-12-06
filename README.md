@@ -1,9 +1,9 @@
  # TerraGov Marine Corps
-[![Percentage of issues still open](https://isitmaintained.com/badge/open/tgstation/TerraGov-Marine-Corps.svg)](https://isitmaintained.com/project/tgstation/TerraGov-Marine-Corps "Percentage of issues still open") [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/tgstation/TerraGov-Marine-Corps.svg)](https://isitmaintained.com/project/tgstation/TerraGov-Marine-Corps "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/CDDA13/CDDA-13.svg)](https://isitmaintained.com/project/CDDA13/CDDA-13 "Percentage of issues still open") [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/CDDA13/CDDA-13.svg)](https://isitmaintained.com/project/CDDA13/CDDA-13 "Average time to resolve an issue")
 
  [![forthebadge](https://forthebadge.com/images/badges/built-with-resentment.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://forthebadge.com) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
- This is a fork based off the July-2018 version of ColonialMarines. To see the original, GPL repo, go [here](https://github.com/MrStonedOne/cmhistory)
+ This is a fork based off the December-2021 version of TGMC. To see the original, TGMC repo, go [here](https://github.com/tgstation/TerraGov-Marine-Corps)
 
 Code and other contributions are licensed under AGPL unless otherwise specified below
 
