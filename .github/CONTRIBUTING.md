@@ -37,7 +37,7 @@ If you want to contribute the first thing you'll need to do is set up Git and cl
 
 We have a [list of guides on the wiki](http://www.tgstation13.org/wiki/index.php/Guides#Development_and_Contribution_Guides) that will help you get started contributing to this codebase with Git and Dream Maker. For beginners, it is recommended you work on small projects like bugfixes at first. If you need help learning to program in BYOND, check out this [repository of resources](http://www.byond.com/developer/articles/resources).
 
-You can of course, as always, ask for help at #coding channel on our [Discord](https://discord.gg/2dFpfNE). We're just here to have fun and help out, so please don't expect professional support. If you're eager to learn we'll gladly hold your hand during the first steps.
+You can of course, as always, ask for help at #general channel on our [Discord](https://discord.gg/Q9Uhy46YRc). We're just here to have fun and help out, so please don't expect professional support. If you're eager to learn we'll gladly hold your hand during the first steps.
 
 ## Meet the Team
 
@@ -823,7 +823,7 @@ Every area must have an APC. A ground map must have roughly 10 generators, with 
 
 #### Connected pipenet
 
-Every ship should have a believable and complete pipe system (ventilation, scrubbers). All pipes must belong to the same network. No pipes ending nowhere. Pipes groundside are not mandatory, but they add to the atmosphere and are usefull to xeno. 
+Every ship should have a believable and complete pipe system (ventilation, scrubbers). All pipes must belong to the same network. No pipes ending nowhere. Pipes groundside are not mandatory, but they add to the atmosphere and are usefull to xeno.
 
 #### Xenos related items (walls, weeds, silos, etc.)
 
@@ -836,7 +836,7 @@ Adding corpse spawner also add to the atmospher, but they are not mandatory.
 
 Any silo placed on map must be protected by enough fog. This fog only appears in crash gamemode and is here to prevent marines to go near xenos spawn locations
 
-#### Intel and nuke disk computers 
+#### Intel and nuke disk computers
 
 There should be a reasonnable amount of intel computers placed in areas with apc. 3 nuke disk computer (yellow, red, blue) must be placed around the map. A nuke landmark has to be present as well somewhere.
 

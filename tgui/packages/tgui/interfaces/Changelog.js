@@ -176,30 +176,22 @@ export class Changelog extends Component {
 
     const header = (
       <Section>
-        <h1>TerraGov Marine Corps</h1>
+        <h1>Cataclysm Dark Days Ahead 13</h1>
         <p>
-          <b>Thanks to:</b> The CM-SS13 devs, The Russian CM, Baystation 12,
-          /tg/Station, /vg/station, NTstation, CDK Station devs,
+          <b>Thanks to:</b> TGMC, The CM-SS13 devs, The Russian CM,
+          Baystation 12, /tg/Station, /vg/station, NTstation, CDK Station devs,
           FacepunchStation, GoonStation devs
           and the original SpaceStation 13 developers.
         </p>
         <p>
-          {'Current project maintainers can be found '}
-          <a href="https://github.com/tgstation?tab=members">
-            here
-          </a>
-          {', Current Staff team can be found '}
-          <a href="https://tgstation13.org/phpBB/viewtopic.php?f=69&t=19855">
-            Here
-          </a>
-          {', recent GitHub contributors can be found '}
-          <a href="https://github.com/tgstation/TerraGov-Marine-Corps/pulse/monthly">
+          {'Recent GitHub contributors can be found '}
+          <a href="https://github.com/CDDA13/CDDA-13/pulse/monthly">
             here
           </a>.
         </p>
         <p>
           {'You can also join our discord '}
-          <a href="https://discord.gg/2dFpfNE">
+          <a href="https://discord.gg/Q9Uhy46YRc">
             here
           </a>.
         </p>
@@ -230,10 +222,10 @@ export class Changelog extends Component {
           <a href="http://forums.somethingawful.com/">SomethingAwful Goons</a>
           {' only.'}
         </p>
-        <h3>TerraGov Marine Corps License</h3>
+        <h3>Cataclysm Dark Days Ahead 13 License</h3>
         <p>
-          {'This is a fork based off the July-2018 version of ColonialMarines. To see the original, GPL repo, go'}
-          <a href={'https://github.com/MrStonedOne/cmhistory'}>
+          {'This is a fork based off the December-2021 version of TGMC. To see the original TGM repo, go'}
+          <a href={'https://github.com/tgstation/TerraGov-Marine-Corps'}>
             here
           </a>
           {'Code and other contributions are licensed under AGPL unless otherwise specified below'}
