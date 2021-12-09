@@ -1,6 +1,6 @@
 /turf/open/floor/plating/ground
 	name = "grass"
-	icon = 'icons/turf/grass.dmi'
+	icon = 'cdda/icons/grass.dmi'
 	icon_state = "green0"
 	shoefootstep = FOOTSTEP_GRASS
 	barefootstep = FOOTSTEP_GRASS
