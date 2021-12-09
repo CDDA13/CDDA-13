@@ -29,12 +29,15 @@
 
 /turf/open/floor/plating/ground/dirt/Initialize(mapload, ...)
 	.=..()
-	if(prob(25))
-		overlay_type = "grassO_"
-	else if(prob(25))
-		overlay_type = "mossO_"
-	else if(prob(25))
-		overlay_type = "grassLongO_"
+	if(!overlay_type)
+		if(prob(25))
+			overlay_type = "grassO_"
+		else if(prob(25))
+			overlay_type = "mossO_"
+		else if(prob(25))
+			overlay_type = "grassLongO_"
+		else if(prob(25))
+			overlay_type = "grassDeadO_"
 	.=INITIALIZE_HINT_LATELOAD
 
 /turf/open/floor/plating/ground/dirt/LateInitialize(mapload)

@@ -15,27 +15,6 @@
 /turf/open/floor/plating/ground/is_plating() //Temporary hack until we re-implement baseturfs, /tg/ plating and change_turf.dm.
 	return FALSE
 
-
-/turf/open/floor/plating/ground/dirt
-	name = "dirt"
-	icon_state = "desert"
-	shoefootstep = FOOTSTEP_SAND
-	barefootstep = FOOTSTEP_SAND
-	mediumxenofootstep = FOOTSTEP_SAND
-
-/turf/open/floor/plating/ground/dirt/Initialize()
-	. = ..()
-	if(rand(0,15) == 0)
-		icon_state = "desert[pick("0","1","2","3")]"
-
-/turf/open/floor/plating/ground/dirt/desert
-	name = "desert"
-	icon_state = "desert5"
-
-/turf/open/floor/plating/ground/dirt/desert/Initialize()
-	. = ..()
-	icon_state = "desert[pick("5","6")]"
-
 /turf/open/floor/plating/ground/dirtgrassborder
 	name = "grass"
 	icon_state = "grassdirt_edge"
