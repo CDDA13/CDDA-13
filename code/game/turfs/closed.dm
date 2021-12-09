@@ -155,9 +155,7 @@
 
 		P.cut_apart(user, name, src)
 
-		if(ismineralturf(src) || istype(src, /turf/closed/desertdamrockwall))
-			ChangeTurf(/turf/open/floor/plating/ground/desertdam/cave/inner_cave_floor)
-		else if(istype(src, /turf/closed/brock))
+		if(istype(src, /turf/closed/brock))
 			var/choice = rand(1,50)
 			if(choice == 50)
 				ChangeTurf(/turf/open/lavaland/basalt/glowing)
@@ -206,9 +204,7 @@
 
 		P.cut_apart(user, name, src)
 
-		if(ismineralturf(src) || istype(src, /turf/closed/desertdamrockwall))
-			ChangeTurf(/turf/open/floor/plating/ground/desertdam/cave/inner_cave_floor)
-		else if(istype(src, /turf/closed/brock))
+		if(istype(src, /turf/closed/brock))
 			var/choice = rand(1,50)
 			if(choice == 50)
 				ChangeTurf(/turf/open/lavaland/basalt/glowing)

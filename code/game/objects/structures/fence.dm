@@ -1,3 +1,4 @@
+/*
 /obj/structure/fence
 	name = "fence"
 	desc = "A large metal mesh strewn between two poles. Intended as a cheap way to separate areas, while allowing one to see through it."
@@ -167,3 +168,4 @@
 	if(exposed_temperature > T0C + 800)
 		take_damage(round(exposed_volume / 100), BURN, "fire")
 	return ..()
+*/
