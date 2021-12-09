@@ -55,22 +55,6 @@
 		if(EXPLODE_DEVASTATE)
 			ChangeTurf(/turf/open/ground/grass)
 
-
-/turf/closed/gm/dense
-	name = "dense jungle wall"
-	icon = 'icons/turf/ground_map.dmi'
-	icon_state = "wall2"
-
-/turf/closed/gm/dense/Initialize()
-	. = ..()
-	if(rand(0,15) == 0)
-		icon_state = "wall1"
-	else if (rand(0,20) == 0)
-		icon_state = "wall3"
-	else
-		icon_state = "wall2"
-
-
 //desertdam rock
 /turf/closed/desertdamrockwall
 	name = "rockwall"
@@ -160,7 +144,7 @@
 
 	if(istype(I, /obj/item/tool/pickaxe/plasmacutter) && !user.do_actions)
 		var/obj/item/tool/pickaxe/plasmacutter/P = I
-		if(!ismineralturf(src) && !istype(src, /turf/closed/gm/dense) && !istype(src, /turf/closed/glass) && !istype(src, /turf/closed/desertdamrockwall) && !istype(src, /turf/closed/brock))
+		if(!ismineralturf(src) && !istype(src, /turf/closed/glass) && !istype(src, /turf/closed/desertdamrockwall) && !istype(src, /turf/closed/brock))
 			to_chat(user, span_warning("[P] can't cut through this!"))
 			return
 		if(!P.start_cut(user, name, src))
@@ -173,8 +157,6 @@
 
 		if(ismineralturf(src) || istype(src, /turf/closed/desertdamrockwall))
 			ChangeTurf(/turf/open/floor/plating/ground/desertdam/cave/inner_cave_floor)
-		else if(istype(src, /turf/closed/gm/dense))
-			ChangeTurf(/turf/open/ground/jungle/clear)
 		else if(istype(src, /turf/closed/brock))
 			var/choice = rand(1,50)
 			if(choice == 50)
@@ -213,7 +195,7 @@
 
 	if(istype(I, /obj/item/tool/pickaxe/plasmacutter) && !user.do_actions)
 		var/obj/item/tool/pickaxe/plasmacutter/P = I
-		if(!ismineralturf(src) && !istype(src, /turf/closed/gm/dense) && !istype(src, /turf/closed/ice) && !istype(src, /turf/closed/desertdamrockwall) && !istype(src, /turf/closed/brock))
+		if(!ismineralturf(src) && !istype(src, /turf/closed/ice) && !istype(src, /turf/closed/desertdamrockwall) && !istype(src, /turf/closed/brock))
 			to_chat(user, span_warning("[P] can't cut through this!"))
 			return
 		if(!P.start_cut(user, name, src))
@@ -226,8 +208,6 @@
 
 		if(ismineralturf(src) || istype(src, /turf/closed/desertdamrockwall))
 			ChangeTurf(/turf/open/floor/plating/ground/desertdam/cave/inner_cave_floor)
-		else if(istype(src, /turf/closed/gm/dense))
-			ChangeTurf(/turf/open/ground/jungle/clear)
 		else if(istype(src, /turf/closed/brock))
 			var/choice = rand(1,50)
 			if(choice == 50)

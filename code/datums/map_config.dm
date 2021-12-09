@@ -5,7 +5,7 @@
 
 /datum/map_config
 	// Metadata
-	var/config_filename = "_maps/LV624.json"
+	var/config_filename = "_maps/worldmap.json"
 	var/defaulted = TRUE  // set to FALSE by LoadConfig() succeeding
 	// Config from maps.txt
 	var/config_max_users = 0
@@ -13,9 +13,9 @@
 	var/voteweight = 1
 
 	// Config actually from the JSON - default values
-	var/map_name = "LV624"
-	var/map_path = "map_files/LV624"
-	var/map_file = "LV624.dmm"
+	var/map_name = "WorldMap"
+	var/map_path = "map_files/WorldMap"
+	var/map_file = "WorldMap.dmm"
 
 	var/traits = null
 	var/space_empty_levels = 1
@@ -69,7 +69,7 @@
 			return
 		switch(maptype)
 			if(GROUND_MAP)
-				return LoadConfig("_maps/lv624.json", error_if_missing, maptype)
+				return LoadConfig("_maps/worldmap.json", error_if_missing, maptype)
 			if(SHIP_MAP)
 				return LoadConfig("_maps/pillar_of_spring.json", error_if_missing, maptype)
 
