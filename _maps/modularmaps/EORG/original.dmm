@@ -22,9 +22,6 @@
 /obj/effect/landmark/weapon_spawn/tier1_weapon_spawn,
 /turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
-"ag" = (
-/turf/open/ground/coast/corner,
-/area/deathmatch)
 "ah" = (
 /obj/machinery/light,
 /obj/effect/ai_node,
@@ -48,7 +45,7 @@
 /turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
 "am" = (
-/obj/structure/fence,
+/obj/structure/connectable/fence,
 /turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
 "an" = (
@@ -124,10 +121,6 @@
 /obj/effect/landmark/weapon_spawn/tier3_weapon_spawn,
 /turf/open/floor/freezer,
 /area/deathmatch)
-"aD" = (
-/obj/effect/ai_node,
-/turf/open/ground/coast/corner,
-/area/deathmatch)
 "aE" = (
 /obj/effect/landmark/deathmatch,
 /turf/open/floor/freezer,
@@ -171,19 +164,9 @@
 /obj/structure/dropship_piece/one/cockpit/right,
 /turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
-"aN" = (
-/turf/open/floor/plating/ground/dirtgrassborder/corner2{
-	dir = 1
-	},
-/area/deathmatch)
 "aO" = (
 /turf/open/floor/plating/ground/dirtgrassborder{
 	dir = 1
-	},
-/area/deathmatch)
-"aP" = (
-/turf/open/floor/plating/ground/dirtgrassborder/corner2{
-	dir = 8
 	},
 /area/deathmatch)
 "aQ" = (
@@ -208,12 +191,6 @@
 /turf/open/floor/plating/ground/dirtgrassborder{
 	dir = 8
 	},
-/area/deathmatch)
-"aV" = (
-/turf/open/floor/plating/ground/dirtgrassborder/corner,
-/area/deathmatch)
-"aW" = (
-/turf/open/floor/plating/ground/dirtgrassborder/corner2,
 /area/deathmatch)
 "aX" = (
 /obj/machinery/door/airlock/multi_tile/mainship/generic{
@@ -253,16 +230,6 @@
 	icon_state = "89"
 	},
 /area/deathmatch)
-"bf" = (
-/turf/open/floor/plating/ground/dirtgrassborder/corner{
-	dir = 4
-	},
-/area/deathmatch)
-"bg" = (
-/turf/open/floor/plating/ground/dirtgrassborder/corner{
-	dir = 8
-	},
-/area/deathmatch)
 "bh" = (
 /obj/machinery/light,
 /turf/open/floor/freezer,
@@ -272,9 +239,7 @@
 /turf/open/floor/freezer,
 /area/deathmatch)
 "bj" = (
-/turf/open/ground/coast/corner{
-	dir = 8
-	},
+/turf/open/space/basic,
 /area/deathmatch)
 "bk" = (
 /obj/machinery/light{
@@ -295,9 +260,7 @@
 /area/deathmatch)
 "bn" = (
 /obj/structure/lattice,
-/turf/open/ground/coast/corner{
-	dir = 4
-	},
+/turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
 "bo" = (
 /turf/closed/shuttle/dropship1{
@@ -360,21 +323,11 @@
 "bA" = (
 /turf/open/floor/plating/dmg1,
 /area/deathmatch)
-"bB" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/dirtgrassborder/corner2{
-	dir = 1
-	},
-/area/deathmatch)
 "bC" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plating/ground/dirtgrassborder/corner{
-	dir = 4
-	},
+/turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
 "bD" = (
 /obj/structure/toilet{
@@ -495,11 +448,6 @@
 	},
 /turf/open/shuttle/dropship/floor,
 /area/deathmatch)
-"bW" = (
-/turf/open/floor/plating/ground/dirtgrassborder/corner2{
-	dir = 4
-	},
-/area/deathmatch)
 "bX" = (
 /obj/effect/landmark/weapon_spawn/tier1_weapon_spawn,
 /obj/effect/ai_node,
@@ -549,9 +497,7 @@
 /area/deathmatch)
 "cg" = (
 /obj/structure/lattice,
-/turf/open/ground/coast/corner{
-	dir = 8
-	},
+/turf/open/space/basic,
 /area/deathmatch)
 "ch" = (
 /turf/closed/shuttle/dropship1{
@@ -570,9 +516,7 @@
 /area/deathmatch)
 "ck" = (
 /obj/structure/dropship_piece/one/weapon/rightleft,
-/turf/open/floor/plating/ground/dirtgrassborder/corner{
-	dir = 4
-	},
+/turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
 "cl" = (
 /obj/structure/dropship_piece/one/weapon/rightright,
@@ -588,9 +532,7 @@
 /area/deathmatch)
 "co" = (
 /obj/structure/dropship_piece/one/corner/middleleft,
-/turf/open/ground/coast/corner{
-	dir = 1
-	},
+/turf/open/space/basic,
 /area/deathmatch)
 "cp" = (
 /turf/closed/shuttle/dropship1{
@@ -688,11 +630,6 @@
 /obj/structure/dropship_piece/one/wing/right/bottom,
 /turf/open/ground/grass,
 /area/deathmatch)
-"cK" = (
-/turf/open/ground/coast/corner{
-	dir = 1
-	},
-/area/deathmatch)
 "cL" = (
 /obj/structure/platform_decoration,
 /turf/open/floor/plating/ground/dirt,
@@ -716,12 +653,6 @@
 	dir = 4
 	},
 /area/deathmatch)
-"cP" = (
-/obj/structure/platform_decoration{
-	dir = 1
-	},
-/turf/open/ground/coast/corner,
-/area/deathmatch)
 "cQ" = (
 /obj/machinery/door/airlock/dropship_hatch/right,
 /turf/open/shuttle/dropship/floor,
@@ -730,9 +661,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/ground/coast/corner{
-	dir = 1
-	},
+/turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
 "cS" = (
 /obj/effect/landmark/weapon_spawn/tier2_weapon_spawn,
@@ -876,14 +805,6 @@
 	dir = 9
 	},
 /area/deathmatch)
-"du" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/ground/coast/corner{
-	dir = 8
-	},
-/area/deathmatch)
 "dv" = (
 /obj/structure/dropship_piece/one/rearwing/lefttop,
 /turf/open/ground/river,
@@ -896,14 +817,6 @@
 "dx" = (
 /obj/structure/flora/stump,
 /turf/open/floor/plating/ground/dirt,
-/area/deathmatch)
-"dy" = (
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/turf/open/ground/coast/corner{
-	dir = 4
-	},
 /area/deathmatch)
 "dz" = (
 /obj/structure/platform{
@@ -941,12 +854,6 @@
 /area/deathmatch)
 "dG" = (
 /turf/closed/wall/wood,
-/area/deathmatch)
-"dH" = (
-/obj/effect/ai_node,
-/turf/open/floor/plating/ground/dirtgrassborder/corner{
-	dir = 4
-	},
 /area/deathmatch)
 "dI" = (
 /obj/machinery/light{
@@ -1020,25 +927,11 @@
 /obj/structure/platform,
 /turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
-"dX" = (
-/obj/structure/platform,
-/turf/open/ground/coast/corner{
-	dir = 8
-	},
-/area/deathmatch)
-"dY" = (
-/obj/structure/platform,
-/turf/open/ground/coast/corner{
-	dir = 4
-	},
-/area/deathmatch)
 "dZ" = (
 /obj/structure/platform_decoration{
 	dir = 1
 	},
-/turf/open/ground/coast/corner{
-	dir = 8
-	},
+/turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
 "ea" = (
 /turf/closed/shuttle/dropship1/transparent{
@@ -1080,9 +973,7 @@
 	dir = 4
 	},
 /obj/structure/platform,
-/turf/open/ground/coast/corner{
-	dir = 4
-	},
+/turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
 "ei" = (
 /obj/structure/platform{
@@ -1183,17 +1074,9 @@
 /obj/item/reagent_containers/food/snacks/grown/mtear,
 /turf/open/floor/mainship/mono,
 /area/deathmatch)
-"eA" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/ground/coast/corner,
-/area/deathmatch)
 "eB" = (
 /obj/structure/dropship_piece/one/engine/leftbottom,
-/turf/open/floor/plating/ground/dirtgrassborder/corner{
-	dir = 1
-	},
+/turf/open/space/basic,
 /area/deathmatch)
 "eC" = (
 /obj/structure/dropship_piece/one/engine/rightbottom,
@@ -1203,21 +1086,13 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/ground/coast/corner{
-	dir = 1
-	},
+/turf/open/floor/plating/ground/dirt,
 /area/deathmatch)
 "eE" = (
 /obj/structure/platform{
 	dir = 1
 	},
 /turf/open/floor/plating/ground/dirt,
-/area/deathmatch)
-"eF" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/ground/coast/corner,
 /area/deathmatch)
 "eG" = (
 /obj/structure/platform{
@@ -1363,11 +1238,6 @@
 "fI" = (
 /turf/open/floor/plating/asteroidfloor,
 /area/deathmatch)
-"hA" = (
-/turf/open/floor/plating/ground/dirtgrassborder/corner{
-	dir = 1
-	},
-/area/deathmatch)
 "hM" = (
 /turf/open/floor/plating/asteroidwarning,
 /area/deathmatch)
@@ -1389,12 +1259,6 @@
 /obj/effect/ai_node,
 /turf/open/floor/plating/dmg1,
 /area/deathmatch)
-"pn" = (
-/obj/effect/ai_node,
-/turf/open/ground/coast/corner{
-	dir = 1
-	},
-/area/deathmatch)
 "rW" = (
 /turf/open/ground/coast{
 	dir = 8
@@ -1402,12 +1266,6 @@
 /area/deathmatch)
 "tf" = (
 /turf/open/ground/coast,
-/area/deathmatch)
-"tr" = (
-/obj/effect/ai_node,
-/turf/open/ground/coast/corner{
-	dir = 8
-	},
 /area/deathmatch)
 "va" = (
 /obj/effect/ai_node,
@@ -1417,17 +1275,6 @@
 /area/deathmatch)
 "xX" = (
 /turf/open/floor/plating/ground/dirt,
-/area/deathmatch)
-"GL" = (
-/turf/open/ground/coast/corner{
-	dir = 4
-	},
-/area/deathmatch)
-"Jm" = (
-/obj/effect/ai_node,
-/turf/open/ground/coast/corner{
-	dir = 4
-	},
 /area/deathmatch)
 "KI" = (
 /obj/effect/ai_node,
@@ -1539,7 +1386,7 @@ TP
 TP
 TP
 VE
-bj
+xX
 am
 xX
 fI
@@ -1626,8 +1473,8 @@ cn
 xX
 xX
 xX
-cK
-GL
+xX
+xX
 am
 tf
 TP
@@ -1731,7 +1578,7 @@ TP
 TP
 ap
 rW
-GL
+xX
 xX
 xX
 fI
@@ -1923,7 +1770,7 @@ TP
 TP
 VE
 an
-bj
+xX
 xX
 dG
 dG
@@ -1963,7 +1810,7 @@ cw
 cw
 as
 al
-ag
+xX
 an
 Tu
 TP
@@ -2019,7 +1866,7 @@ dd
 dd
 dd
 dt
-dy
+eD
 xX
 dG
 dJ
@@ -2263,14 +2110,14 @@ dz
 dF
 xX
 al
-ag
+xX
 an
 ee
 eq
 ev
 an
 an
-bj
+xX
 xX
 xX
 fd
@@ -2298,7 +2145,7 @@ xX
 xX
 al
 af
-cP
+dZ
 cU
 cZ
 cZ
@@ -2306,10 +2153,10 @@ cZ
 cZ
 cZ
 dp
-du
+ei
 dB
 af
-ag
+xX
 an
 Tu
 TP
@@ -2319,7 +2166,7 @@ ew
 TP
 TP
 VE
-bj
+xX
 af
 fe
 xX
@@ -2343,7 +2190,7 @@ xX
 ad
 xX
 xX
-ag
+xX
 an
 an
 Tu
@@ -2368,7 +2215,7 @@ bT
 TP
 TP
 VE
-bj
+xX
 al
 xX
 xX
@@ -2381,15 +2228,15 @@ xX
 af
 xX
 xX
-aD
-bj
+ad
+xX
 af
 xX
 xX
 xX
 bX
 xX
-ag
+xX
 an
 Tu
 TP
@@ -2435,7 +2282,7 @@ am
 am
 am
 xX
-ag
+xX
 an
 Tu
 TP
@@ -2465,7 +2312,7 @@ tf
 TP
 TP
 VE
-bj
+xX
 xX
 xX
 ab
@@ -2475,7 +2322,7 @@ ab
 xX
 xX
 xX
-ag
+xX
 an
 Tu
 VE
@@ -2504,17 +2351,17 @@ TP
 aH
 TP
 VE
-dX
+dW
 cT
 er
 ez
-eF
+eE
 Tu
 TP
 TP
 TP
 VE
-tr
+ad
 xX
 ab
 "}
@@ -2552,7 +2399,7 @@ TP
 TP
 TP
 ap
-dY
+dW
 cT
 cT
 cT
@@ -2563,14 +2410,14 @@ TP
 TP
 TP
 VE
-bj
+xX
 ab
 "}
 (24,1,1) = {"
 ab
 af
 xX
-ag
+xX
 Tu
 TP
 TP
@@ -2603,7 +2450,7 @@ VE
 dZ
 ei
 es
-eA
+ei
 eH
 TP
 ao
@@ -2616,7 +2463,7 @@ ab
 "}
 (25,1,1) = {"
 ab
-ag
+xX
 an
 Tu
 TP
@@ -2683,7 +2530,7 @@ bT
 TP
 TP
 ap
-GL
+xX
 db
 bI
 bV
@@ -2738,7 +2585,7 @@ dh
 bA
 aR
 bA
-cK
+xX
 bT
 TP
 TP
@@ -2779,7 +2626,7 @@ tf
 TP
 TP
 VE
-bj
+xX
 xX
 xX
 xX
@@ -2787,7 +2634,7 @@ xX
 bJ
 aR
 xX
-cK
+xX
 rW
 bT
 TP
@@ -2830,8 +2677,8 @@ TP
 aq
 xX
 af
-ag
-bj
+xX
+xX
 xX
 xX
 xX
@@ -2875,17 +2722,17 @@ tf
 TP
 ap
 rW
-GL
 xX
-ag
+xX
+xX
 Tu
 VE
 an
-bj
+xX
 xX
 al
 xX
-cK
+xX
 rW
 rW
 rW
@@ -2929,7 +2776,7 @@ tf
 TP
 TP
 ap
-GL
+xX
 xX
 dD
 xX
@@ -2938,7 +2785,7 @@ xX
 xX
 xX
 xX
-cK
+xX
 rW
 bT
 TP
@@ -2969,11 +2816,11 @@ TP
 TP
 TP
 ap
-GL
+xX
 xX
 cV
 af
-cK
+xX
 rW
 bT
 aq
@@ -3016,17 +2863,17 @@ TP
 TP
 TP
 ap
-GL
-aN
+xX
+xX
 aU
 aU
-bW
+xX
 xX
 al
-cK
-GL
-aN
-bW
+xX
+xX
+xX
+xX
 xX
 xX
 bP
@@ -3036,11 +2883,11 @@ bP
 ej
 xX
 xX
-cK
-Jm
+xX
+ad
 xX
 al
-cK
+xX
 bT
 ai
 TP
@@ -3063,18 +2910,18 @@ TP
 TP
 ap
 rW
-GL
-aN
-bf
+xX
+xX
+xX
 LP
 LP
-hA
+xX
 aU
 aU
-bW
+xX
 al
 aO
-hA
+xX
 aU
 aU
 dm
@@ -3109,27 +2956,27 @@ TP
 ap
 rW
 rW
-GL
-aN
+xX
+xX
 aU
-bf
+xX
 LP
 LP
 LP
 LP
 LP
 LP
-hA
+xX
 aU
-bf
+xX
 LP
 LP
 LP
 LP
 ds
 dP
-aN
-bW
+xX
+xX
 al
 xX
 eI
@@ -3154,11 +3001,11 @@ ap
 rW
 rW
 rW
-GL
+xX
 al
 bX
-aN
-dH
+xX
+ad
 cy
 bz
 LP
@@ -3169,23 +3016,23 @@ LP
 pj
 dl
 LP
-aV
+xX
 dw
-bg
+xX
 bu
 LP
-hA
+xX
 aU
-bf
-hA
+xX
+xX
 aU
-bW
+xX
 xX
 ad
 dP
 eX
 xX
-cK
+xX
 bT
 TP
 ab
@@ -3201,10 +3048,10 @@ aG
 bn
 al
 ad
-aN
-bW
+xX
+xX
 TE
-aN
+xX
 ck
 bm
 bJ
@@ -3234,7 +3081,7 @@ xX
 eY
 xX
 xX
-pn
+ad
 rW
 ab
 "}
@@ -3248,11 +3095,11 @@ aQ
 bc
 bo
 af
-aN
-bf
-hA
+xX
+xX
+xX
 aU
-bf
+xX
 cl
 cr
 cz
@@ -3265,9 +3112,9 @@ de
 dj
 dn
 LP
-hA
+xX
 aU
-bf
+xX
 LP
 LP
 LP
@@ -3295,8 +3142,8 @@ aJ
 aR
 bd
 bp
-bB
-bf
+bC
+xX
 LP
 LP
 bR
@@ -3324,13 +3171,13 @@ ea
 el
 et
 eB
-bW
+xX
 al
-aN
+xX
 aU
 aU
 aU
-bW
+xX
 xX
 ab
 "}
@@ -3372,9 +3219,9 @@ eb
 em
 eu
 eC
-hA
+xX
 aU
-bf
+xX
 LP
 LP
 LP
@@ -3426,8 +3273,8 @@ LP
 LP
 bR
 LP
-hA
-bW
+xX
+xX
 ab
 "}
 (42,1,1) = {"
@@ -3481,11 +3328,11 @@ ab
 (43,1,1) = {"
 ab
 rW
-GL
+xX
 al
-aN
+xX
 aU
-bf
+xX
 bt
 LP
 LP
@@ -3532,8 +3379,8 @@ xX
 ad
 xX
 aO
-aV
-bg
+xX
+xX
 LP
 LP
 bu
@@ -3570,8 +3417,8 @@ LP
 LP
 LP
 LP
-aV
-aW
+xX
+xX
 ab
 "}
 (45,1,1) = {"
@@ -3579,8 +3426,8 @@ ab
 ac
 xX
 xX
-aP
-aW
+xX
+xX
 aO
 LP
 LP

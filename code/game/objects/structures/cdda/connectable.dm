@@ -22,11 +22,11 @@
 	var/dir_sum = 0
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf = get_step(src, direction)
-		for(var/obj/structure/connectable/structure in turf)
-			if((istype(structure, type) || is_type_in_list(structure, connectable_types)) && !QDELING(structure))
+		for(var/obj/object in turf)
+			if((istype(object, type) || is_type_in_list(object, connectable_types)) && !QDELING(object))
 				dir_sum += direction
 				if(update_nearby)
-					structure.update_icon()
+					object.update_icon()
 				break
 	icon_state = "[basestate][dir_sum]"
 
@@ -34,9 +34,9 @@
 	.=..()
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf = get_step(src, direction)
-		for(var/obj/structure/connectable/structure in turf)
-			if((istype(structure, type) || is_type_in_list(structure, connectable_types)) && !QDELING(structure))
-				structure.update_icon()
+		for(var/obj/object in turf)
+			if((istype(object, type) || is_type_in_list(object, connectable_types)) && !QDELING(object))
+				object.update_icon()
 
 /*
 	Subtypes below
@@ -113,5 +113,25 @@
 	icon_state = "palisade_0"
 	max_integrity = 300
 	coverage = 100
+	opacity = TRUE
 	throwpass = FALSE
 	basestate = "palisade_"
+
+// Obj instead of turf because it has empty pixels in 3 sprites
+/obj/structure/connectable/tent_wall
+	name = "canvas wall"
+	desc = ""
+	icon = 'cdda/icons/walls.dmi'
+	icon_state = "tent0"
+	opacity = TRUE
+	density = TRUE
+	max_integrity = 100
+	basestate = "tent"
+	connectable_types = list(/obj/machinery/door/tent)
+
+/obj/machinery/door/tent
+	name = "canvas door"
+	desc = ""
+	icon = 'cdda/icons/walls.dmi'
+	not_weldable = TRUE
+	openspeed = 0.6 SECONDS
