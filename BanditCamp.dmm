@@ -1,0 +1,104 @@
+"a" = (/turf/open/floor/grass,/area/assembly/assembly_line)
+"b" = (/obj/effect/landmark/start/job/chiefshipengineer/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"c" = (/obj/effect/landmark/start/job/synthetic/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"d" = (/obj/effect/particle_effect/fire,/obj/flamer_fire,/turf/open/floor/grass,/area/assembly/assembly_line)
+"e" = (/obj/structure/bed/chair{dir = 8},/obj/effect/landmark/start/job/squadmarine/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"g" = (/obj/structure/table,/obj/effect/spawner/random/drink_alcohol_bottle,/turf/open/floor/grass,/area/assembly/assembly_line)
+"h" = (/mob/living/simple_animal/hostile/mimic/crate,/turf/open/floor/grass,/area/assembly/assembly_line)
+"i" = (/obj/item/bedsheet,/obj/structure/bed,/turf/open/floor/grass,/area/assembly/assembly_line)
+"j" = (/obj/structure/table/woodentable,/obj/item/tool/kitchen/utensil/spoon,/turf/open/floor/grass,/area/assembly/assembly_line)
+"k" = (/obj/effect/landmark/start/job/squadsmartgunner/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"l" = (/obj/structure/bed/chair{dir = 4},/turf/open/floor/grass,/area/assembly/assembly_line)
+"m" = (/obj/structure/prop/mainship/minigun_crate,/obj/structure/largecrate/supply/weapons/standard_smg,/turf/open/floor/grass,/area/assembly/assembly_line)
+"n" = (/obj/structure/bed/chair{dir = 4},/obj/effect/landmark/start/job/squadmarine/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"o" = (/obj/machinery/robotic_fabricator,/turf/open/floor/grass,/area/assembly/assembly_line)
+"p" = (/obj/structure/closet,/obj/effect/spawner/random/sugary_snack,/obj/item/weapon/combat_knife,/turf/open/floor/grass,/area/assembly/assembly_line)
+"q" = (/obj/effect/landmark/start/job/squadcorpsman/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"r" = (/obj/structure/connectable/tent_wall,/turf/open/floor/grass,/area/assembly/assembly_line)
+"s" = (/obj/effect/decal/remains/robot,/obj/effect/landmark/start/job/researcher/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"t" = (/obj/structure/closet/crate/ammo,/turf/open/floor/grass,/area/assembly/assembly_line)
+"u" = (/obj/structure/bed/chair{dir = 1},/turf/open/floor/grass,/area/assembly/assembly_line)
+"v" = (/obj/structure/bed/chair{dir = 1},/obj/effect/landmark/start/job/captain/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"w" = (/obj/structure/bed/chair{dir = 1},/obj/effect/landmark/start/job/survivor,/turf/open/floor/grass,/area/assembly/assembly_line)
+"x" = (/obj/structure/connectable/tent_wall,/obj/structure/connectable/tent_wall,/turf/open/floor/grass,/area/assembly/assembly_line)
+"y" = (/obj/structure/largecrate/supply/supplies/water,/turf/open/floor/grass,/area/assembly/assembly_line)
+"z" = (/obj/structure/connectable/tent_wall,/turf/open/space/basic,/area/assembly/assembly_line)
+"A" = (/obj/machinery/door/tent,/turf/open/floor/grass,/area/assembly/assembly_line)
+"B" = (/obj/structure/closet,/obj/effect/spawner/random/outdoors_snacks,/obj/item/weapon/combat_knife,/turf/open/floor/grass,/area/assembly/assembly_line)
+"C" = (/obj/machinery/roomba,/turf/open/floor/grass,/area/assembly/assembly_line)
+"D" = (/obj/structure/largecrate/supply/weapons/flamers,/turf/open/floor/grass,/area/assembly/assembly_line)
+"E" = (/obj/structure/largecrate/supply/weapons/hpr,/turf/open/floor/grass,/area/assembly/assembly_line)
+"F" = (/turf/closed/wall/wood,/area/assembly/assembly_line)
+"G" = (/obj/effect/landmark/start/job/fieldcommander/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"H" = (/obj/structure/closet/crate/freezer,/turf/open/floor/grass,/area/assembly/assembly_line)
+"I" = (/obj/effect/landmark/start/job/squadmarine/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"J" = (/obj/effect/decal/remains/robot,/turf/open/floor/grass,/area/assembly/assembly_line)
+"K" = (/obj/effect/landmark/start/job/requisitionsofficer/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"L" = (/obj/structure/largecrate/supply/supplies/metal,/turf/open/floor/grass,/area/assembly/assembly_line)
+"M" = (/turf/open/beach/sand,/area/assembly/assembly_line)
+"N" = (/obj/item/bedsheet,/obj/structure/bed,/obj/effect/landmark/start/job/squadmarine/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"O" = (/obj/structure/largecrate/supply/supplies/mre,/turf/open/floor/grass,/area/assembly/assembly_line)
+"P" = (/obj/machinery/vending/robotics,/turf/open/floor/grass,/area/assembly/assembly_line)
+"Q" = (/obj/machinery/autolathe,/turf/open/floor/grass,/area/assembly/assembly_line)
+"R" = (/obj/structure/table/woodentable,/obj/item/tool/kitchen/utensil/fork,/turf/open/floor/grass,/area/assembly/assembly_line)
+"S" = (/obj/structure/table/woodentable,/obj/item/tool/kitchen/utensil/fork,/obj/item/tool/kitchen/utensil/spoon,/turf/open/floor/grass,/area/assembly/assembly_line)
+"T" = (/obj/effect/decal/remains/robot,/obj/effect/landmark/start/job/shiptech/rebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"U" = (/obj/item/book/manual/robotics_cyborgs,/turf/open/floor/grass,/area/assembly/assembly_line)
+"V" = (/obj/structure/largecrate/supply/generator,/turf/open/floor/grass,/area/assembly/assembly_line)
+"W" = (/obj/structure/largecrate/supply/weapons/shotgun,/turf/open/floor/grass,/area/assembly/assembly_line)
+"X" = (/obj/item/bedsheet,/obj/structure/bed,/obj/effect/landmark/start/job/squadmarine/rebel,/obj/effect/landmark/start/latejoinrebel,/turf/open/floor/grass,/area/assembly/assembly_line)
+"Y" = (/obj/item/bedsheet,/obj/structure/bed,/obj/effect/landmark/start/latejoin_cryo,/turf/open/floor/grass,/area/assembly/assembly_line)
+"Z" = (/obj/machinery/r_n_d/protolathe,/turf/open/floor/grass,/area/assembly/assembly_line)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFaaaaaa
+aaaaaaFaaaaaaarrrrraaaaaaarrrrraaaaaaaaaaaaFaaaaaa
+aaaaaaFaaaaaaarpairaaaaaaarpIirarrrrraaaaaaFaaaaaa
+aaaaaaFrrrrraarangraaaaaaaralgrarpairaaaaaaFaaaaaa
+aaaaaaFrpIiraarBIiraaaaaaarBIirarangraaaaaaFaaaaaa
+aaaaaaFralgraarrArraarrrrrrrArrarBIiraaaaaaFaaaaaa
+aaaaaaFrBIiraaaaaaaaarpaXraaaaaarrArraaaaaaFaaaaaa
+aaaaaaFrrArraarrrrraaAalgraaaaaaaaaaaaaaaaaFaaaaaa
+aaaaaaFaaaaaaarNaBraarBaNraaaaaaarrrrraaaaaFaaaaaa
+aaaaaaFaaaaaaaAangraarrzrraaaaaaarNaBraaaaaFaaaaaa
+aaaaaaFrrrrraariapraaaaaaaaaaaaaaAangraaaaaFaaaaaa
+aaaaaaFrpairaarrzrraarrArrarrrrrariapraaaaaFaaaaaa
+aaaaaaFrgeaAaaaaaaaaarpaBrarpaYrarrzrraaaaaFaaaaaa
+aaaaaaFrBaNraaaaaaaaarauarargeaAaaaaaaaaaaaFaaaaaa
+aaaaaaFrrzrrarrArraaarNgNrarBaNraaaaaaaaaaaFaaaaaa
+aaaaaaFaaaaaarpaNraaarrrrrarrzrraaaaaaaaaaaFaaaaaa
+aaaaaaFaaaaaaralgraaaaaaaaaaaaaaaaaaaaaaaaaFaaaaaa
+aaaaaaFaaaaaarBaNrarrArraaaaaaaaaaaaaaaaaaaFaaaaaa
+aaaaaaFaaaaaarrzrrarpaNraaaaaaaaaaaaaaaaaaaFaaaaaa
+aaaaaaFaaaaaaaaaaaaralgraaaaaaaaaaarrrrrrrrFaaaaaa
+aaaaaaFaaaaaaaaaaaarBaNraaaaaaaaaaarFCoaJaQFaaaaaa
+aaaaaaFaaaaaaaaaaaarrzrraaaaaaaaaaaraJUaaaaFaaaaaa
+aaaaaaFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZFaaaaaa
+aaaaaaFaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaJbcsaZFaaaaaa
+aaaaaaFaaaaaaaaaaaaaaaaaaaaaaaaaaaaraaaaaaaFaaaaaa
+aaaaaaFaaaarrrrrrrrrxaaaaaaaaaaaaaarFPaTaaQFaaaaaa
+aaaaaaFaaaarSSSjSjSSraaaaaaaaaaaaaarrrrrrrrFaaaaaa
+aaaaaaFaaaaruwuwwuwuraaaaaaaaaaaaaaaaaaaaaaFaaaaaa
+aaaaaaFaaaaraaMMMaaaraaaaaaaaaaaaaaaaaaaaaaFaaaaaa
+aaaaaaFaaaarHaMdMaaaAaaaaaaaaaaaFArrrrrrrrrFaaaaaa
+aaaaaaFaaaarHaMdMaaaAaaaaaaaaaaaAaaOOOyyyatFaaaaaa
+aaaaaaFaaaaraaMMMaaaraakqkaaaaaaraKaaaaaaatFaaaaaa
+aaaaaaFaaaaruwuvuuwwraaaaaaaaaaaraaaaaaaaatFaaaaaa
+aaaaaaFaaaarSSSRRSRSraaaGaaaaaaaraaaaaaaaatFaaaaaa
+aaaaaaFaaaaxrrrrrrrrxaaaaaaaaaaaraLLLaaVaatFaaaaaa
+aaaaaaFaaaaaaaaaaaaaaaaaaaaaaaaaraaaaaaaamtFaaaaaa
+aaaaaaFaaaaaaaaaaaaaaaaaaaaaaaaarDEWWWWWWhtFaaaaaa
+aaaaaaFFFFFFFFFFFFFFFFaaaaaaFFFFFFFFFFFFFFFFaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}
