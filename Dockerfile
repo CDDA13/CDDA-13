@@ -66,4 +66,4 @@ RUN apt-get update \
 
 VOLUME [ "/tgmc/config", "/tgmc/data" ]
 
-ENTRYPOINT [ "DreamDaemon", "tgmc.dmb", "-port", "1337", "-trusted", "-close", "-verbose" ]
+ENTRYPOINT [ "DreamDaemon", "cdda13.dmb", "-port", "1337", "-trusted", "-close", "-verbose" ]
