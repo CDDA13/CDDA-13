@@ -83,7 +83,7 @@
 // Default preferences
 #define DEFAULT_SPECIES "Human"
 
-#define GAME_YEAR (text2num(time2text(world.realtime, "YYYY")) + 395)
+#define GAME_YEAR (text2num(time2text(world.realtime, "YYYY")) + 1)
 
 
 #define MAX_MESSAGE_LEN 1024
