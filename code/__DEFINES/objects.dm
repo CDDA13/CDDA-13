@@ -255,3 +255,6 @@ GLOBAL_LIST_INIT(restricted_camera_networks, list( //Those networks can only be 
 #define MOTION_DETECTOR_HOSTILE "hostile"
 #define MOTION_DETECTOR_FRIENDLY "friendly"
 #define MOTION_DETECTOR_DEAD "dead"
+
+//Crafting qualities
+#define CRAFTING_QUALITY_STICK "stick"

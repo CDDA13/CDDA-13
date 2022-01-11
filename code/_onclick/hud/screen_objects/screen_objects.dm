@@ -671,7 +671,11 @@
 
 	usr.hud_used.hidden_inventory_update()
 
-
+/obj/screen/craft
+	name = "crafting menu"
+	icon = 'icons/mob/screen/midnight.dmi'
+	icon_state = "craft"
+	screen_loc = ui_crafting
 /obj/screen/ammo
 	name = "ammo"
 	icon = 'icons/mob/ammoHUD.dmi'

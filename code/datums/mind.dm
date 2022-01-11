@@ -33,6 +33,8 @@
 
 	var/memory
 
+	var/list/datum/crafting_recipe/learned_recipes
+
 	var/datum/money_account/initial_account
 
 	var/last_death = 0
