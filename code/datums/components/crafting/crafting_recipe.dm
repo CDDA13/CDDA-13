@@ -9,7 +9,10 @@
 	// 1. Way of crafting
 	// 2. Required item/quality
 	// 3. Time to complete step
-	// 4. Additional arguments. Used only in CRAFT_MATERIAL to set amount of material needed
+	// 4. Additional arguments:
+	//		CRAFT_MATERIAL: Units to use
+	//		CRAFT_TOOL: fuel amount, volume
+	//		CRAFT_CRAFTING_QUALITY: quality level
 	var/list/list/steps
 	var/is_simple
 
@@ -19,15 +22,13 @@
 	icon_state = "device"
 	base_item = /obj/item/mass_spectrometer
 	result = /obj/item/megaphone
-	// 2 sheets of glass
-	// 1 defibrillator
-	// 1 screwdriver
-	// 1 stick
+	is_simple = TRUE
+	always_available = TRUE
 	steps = list(
 		list(CRAFT_MATERIAL, /obj/item/stack/sheet/glass, 10, 2),
 		list(CRAFT_ITEM, /obj/item/defibrillator, 5),
-		list(CRAFT_TOOL, TOOL_SCREWDRIVER, 7),
-		list(CRAFT_CRAFTING_QUALITY, CRAFTING_QUALITY_STICK, 7),
+		list(CRAFT_TOOL, TOOL_SCREWDRIVER, 7, 4, 6),
+		list(CRAFT_CRAFTING_QUALITY, CRAFTING_QUALITY_STICK, 7, 1),
 	)
 
 /datum/crafting_recipe/New()
@@ -44,10 +45,10 @@
 
 		if(CRAFT_TOOL)
 			if(item.tool_behaviour == step[2])
-				return list(step[1], step[3])
+				return list(step[1], step[3], step[4], step[5])
 
 		if(CRAFT_CRAFTING_QUALITY)
-			if(item.crafting_qualities == step[2])
+			if(item.crafting_qualities[step[2]] >= step[4])
 				return list(step[1], step[3])
 
 		if(CRAFT_MATERIAL)
