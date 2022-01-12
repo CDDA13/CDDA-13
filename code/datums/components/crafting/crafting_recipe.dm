@@ -27,14 +27,14 @@
 	steps = list(
 		list(CRAFT_MATERIAL, /obj/item/stack/sheet/glass, 10, 2),
 		list(CRAFT_ITEM, /obj/item/defibrillator, 5),
-		list(CRAFT_TOOL, TOOL_SCREWDRIVER, 7, 4, 6),
+		list(CRAFT_TOOL, TOOL_SCREWDRIVER, 7, 0, 6),
 		list(CRAFT_CRAFTING_QUALITY, CRAFTING_QUALITY_STICK, 7, 1),
 	)
 
 /datum/crafting_recipe/New()
 	.=..()
 	if(is_simple)
-		GLOB.simple_recipes[base_item] |= src
+		GLOB.simple_recipes[base_item] += src
 
 /datum/crafting_recipe/proc/try_step(obj/item/item, step_stage)
 	var/list/step = steps[step_stage]

@@ -16,14 +16,8 @@
 
 	RegisterSignal(parent, COMSIG_PARENT_EXAMINE, .proc/on_examine)
 
-/datum/component/crafting_ingridient/proc/start_recipe(datum/crafting_recipe/recipe)
-	if(!current_recipe)
-		current_recipe = recipe
-		current_step = 1
-		UnregisterSignal(parent, COMSIG_PARENT_ATTACKBY)
-		RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, .proc/handle_steps)
-
 /datum/component/crafting_ingridient/proc/handle_steps(datum/source, obj/item/item, mob/user, params, datum/crafting_recipe/recipe)
+	SIGNAL_HANDLER
 	if(!recipe)
 		if(!current_recipe)
 			return
@@ -37,6 +31,11 @@
 	if(!islist(step_result))
 		return
 
+	//do_after uses stoplag()
+	INVOKE_ASYNC(src, .proc/on_step_success, step_result, item, user, recipe)
+	return TRUE
+
+/datum/component/crafting_ingridient/proc/on_step_success(list/step_result, obj/item/item, mob/user, datum/crafting_recipe/recipe)
 	switch(step_result[1])
 		if(CRAFT_ITEM)
 			if(do_after(user, step_result[2], TRUE, parent))
@@ -59,7 +58,7 @@
 				.=TRUE
 
 	if(.)
-		if(recipe.steps[current_step+1])
+		if(current_step < recipe.steps.len)
 			current_step += 1
 		else
 			if(isitem(parent))
@@ -69,7 +68,7 @@
 					var/obj/item/result = new recipe.result
 					if(parent_obj.loc == user)
 						parent_obj.moveToNullspace()
-						user.put_in_hands(result)
+						user.put_in_inactive_hand(result)
 					else
 						parent_obj.moveToNullspace()
 						result.doMove(get_turf(parent_obj))
@@ -84,11 +83,14 @@
 			qdel(parent)
 
 /datum/component/crafting_ingridient/proc/handle_simple_recipes(datum/source, obj/item/item, mob/user, params)
+	SIGNAL_HANDLER
 	for(var/datum/crafting_recipe/recipe in simple_recipes)
 		if(handle_steps(source, item, user, params, recipe))
+			current_recipe = recipe
 			UnregisterSignal(parent, COMSIG_PARENT_ATTACKBY)
 			RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, .proc/handle_steps)
 			break
 
 /datum/component/crafting_ingridient/proc/on_examine(datum/source, mob/user)
+	SIGNAL_HANDLER
 	to_chat(user, "test test")
