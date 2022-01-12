@@ -1,27 +1,25 @@
+/datum/component/crafting
+	var/cur_category = CAT_NONE
+	var/list/categories = list(CAT_NONE)
+	var/display_craftable_only = FALSE
+
 /datum/component/crafting/Initialize()
 	if(ismob(parent))
+		var/mob/mob = parent
 		RegisterSignal(parent, COMSIG_MOB_LOGIN, .proc/create_mob_button)
+		RegisterSignal(mob.mind, COMSIG_ADD_NEW_CATEGORY, .proc/add_new_category)
+	else
+		return COMPONENT_INCOMPATIBLE
 
-/datum/component/crafting/proc/create_mob_button(mob/user, client/CL)
+/datum/component/crafting/proc/create_mob_button(mob/user)
 	SIGNAL_HANDLER
+	var/obj/screen/craft/button = new()
+	user.hud_used.static_inventory += button
+	user.client.screen += button
+	RegisterSignal(button, COMSIG_CLICK, .proc/component_ui_interact)
 
-	var/datum/hud/H = user.hud_used
-	var/obj/screen/craft/C = new()
-	H.static_inventory += C
-	CL.screen += C
-	RegisterSignal(C, COMSIG_CLICK, .proc/component_ui_interact)
-
-/datum/component/crafting
-	var/busy
-	var/viewing_category = 1 //typical powergamer starting on the Weapons tab
-	var/viewing_subcategory = 1
-
-	var/cur_category = CAT_NONE
-	var/cur_subcategory = CAT_NONE
-	var/list/categories = list()
-	var/datum/action/innate/crafting/button
-	var/display_craftable_only = FALSE
-	var/display_compact = TRUE
+/datum/component/crafting/proc/add_new_category(mob/user, category)
+	categories |= category
 
 /datum/component/crafting/proc/component_ui_interact(obj/screen/craft/image, location, control, params, user)
 	SIGNAL_HANDLER
@@ -37,11 +35,20 @@
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		cur_category = categories[1]
-		ui = new(user, src, "PersonalCrafting")
+		ui = new(user, src, "PersonalCrafting", "Crafting Menu")
 		ui.open()
 
 /datum/component/crafting/ui_data(mob/user)
 	var/list/data = list()
+	var/mob/parent_mob = parent
+
+	data["categories"] = categories
+	data["category"] = cur_category
+
+	var/list/recipes = list()
+	for(var/datum/crafting_recipe/recipe in parent_mob.mind.learned_recipes)
+		if(cur_category == recipe.category)
+			recipes += list(list("name"=recipe.name, "id"=REF(recipe), "desc"=recipe.desc, "steps"=recipe.steps))
 
 	return data
 

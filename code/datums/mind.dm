@@ -44,6 +44,7 @@
 
 /datum/mind/New(key)
 	src.key = key
+	learned_recipes = GLOB.always_available_recipes
 
 
 /datum/mind/Destroy(force, ...)
@@ -95,6 +96,10 @@
 
 	recipient << browse(output, "window=memory")
 
+//Use this proc instead of adding new recipes directly into learned_recipes
+/datum/mind/proc/learn_recipe(datum/crafting_recipe/recipe)
+	learned_recipes |= recipe
+	SEND_SIGNAL(src, COMSIG_ADD_NEW_CATEGORY, recipe.category)
 
 /mob/proc/mind_initialize()
 	if(mind)
