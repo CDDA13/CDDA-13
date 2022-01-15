@@ -128,11 +128,8 @@
 		if("lore")
 			view_lore()
 
-		if("marines")
-			view_marines()
-
-		if("aliens")
-			view_aliens()
+		if("catacylsm")
+			view_cataclysm()
 
 		if("SelectedJob")
 			if(!SSticker)
@@ -233,32 +230,21 @@
 
 /mob/new_player/proc/view_lore()
 	var/output = "<div align='center'>"
-	output += "<a href='byond://?src=[REF(src)];lobby_choice=marines'>TerraGov Marine Corps</A><br><br><a href='byond://?src=[REF(src)];lobby_choice=aliens'>Xenomorph Hive</A>"
+	output += "<a href='byond://?src=[REF(src)];lobby_choice=cataclysm'>Catacylsm Dark Days Ahead</A>"
 	output += "</div>"
 
 	var/datum/browser/popup = new(src, "lore", "<div align='center'>Current Year: [GAME_YEAR]</div>", 240, 300)
 	popup.set_content(output)
 	popup.open(FALSE)
 
-/mob/new_player/proc/view_marines()
+/mob/new_player/proc/view_cataclysm()
 	var/output = "<div align='center'>"
-	output += "<p><i>The <b>TerraGov Marine Corps'</b> mission is to enforce space law for the purpose of defending Terra's orbit as well as other solar colonies around the galaxy under the conflict of the Independent Colonial Confederation and the intelligent xenomorph threat. \nThe TGMC is composed by willing men and women from all kinds of social strata, hailing from all across the TerraGov systems. \nAs the vessel approaches to the ordered location on space, the cryostasis pods deactivate and awake you from your long-term stasis. Knowing that it's one of those days again, you hope that you'll make this out alive...</i></p>"
+	output += "<p><i>DDA takes place in the New England region of the USA. The game begins by default five days after an event called the Cataclysm, changing the mundane routine of a civilized world to that of individual survival in a world without civilization. There was an arms race to develop transhumans. In the process, the US government discovered alternate dimensions and obtained a sample called XE-037, a mysterious black goo that was able to reanimate the dead and cause miraculous targeted phenotype mutations. XE-037 turned out to be intelligent - vastly so - and escaped, contaminating the groundwater and causing an enormous zombie outbreak. As this spiraled out of control, Earth became the target of a multidimensional portal attack through which the Blob, the entity of which XE-037 is just a small part, took over our world. Simultaneously, forces from other dimensions entered opportunistically as our dimensional fabric was destabilized. This was the Cataclysm. As it surged forth in a mist of government conspiracies and cover-ups, the few who saw the coming dangers prepared themselves for the end of the world. Amidst the chaos and misinformation survivors rarely had a chance to even peek the glimpse of true background of the Cataclysm, and are generally clueless about what has really happened.</i></p>"
 	output += "</div>"
 
-	var/datum/browser/popup = new(src, "marines", "<div align='center'>TerraGov Marine Corps</div>", 480, 280)
+	var/datum/browser/popup = new(src, "cataclysm", "<div align='center'>Catacylsm Dark Days Ahead</div>", 480, 280)
 	popup.set_content(output)
 	popup.open(FALSE)
-
-/mob/new_player/proc/view_aliens()
-	var/output = "<div align='center'>"
-	output += "<p><i>Hailing from one of many unknown planets and other unlisted habitats, the <b>xenomorph threat</b> remains at large and still unclear. Extremely dangerous extraterrestrial lifeforms, part of the hive under the Queen Mother, had caught the TGMC and NT colonies off-guard during their discovery in 2414. \nThey are divided into castes, each with their specialized roles equivalent to a traditional squad member in a human force, thanks to the xenomorph's lifecycle. \nAfter days of ravaging the current area, a metal hive was sighted by the Queen Mother and transported you on the ground. With your intent to spread the hive is in motion, you and your fellow sisters get to work...</i></p>"
-	output += "</div>"
-
-	var/datum/browser/popup = new(src, "aliens", "<div align='center'>Xenomorph Hive</div>", 480, 280)
-	popup.set_content(output)
-	popup.open(FALSE)
-
-
 
 
 /mob/new_player/Move()

@@ -17,6 +17,7 @@
 #define FACTION_HIVEBOT "Hivebot"
 #define FACTION_HOSTILE "Hostile"
 #define FACTION_PIRATE "Pirate"
+#define FACTION_ZOMBIE "Zombie"
 
 //Alignement are currently only used by req.
 ///Mob with a neutral alignement cannot be sold by anyone
@@ -45,6 +46,7 @@ GLOBAL_LIST_INIT(faction_to_alignement, list(
 	FACTION_HIVEBOT = ALIGNEMENT_HOSTILE,
 	FACTION_HOSTILE = ALIGNEMENT_HOSTILE,
 	FACTION_PIRATE = ALIGNEMENT_HOSTILE,
+	FACTION_ZOMBIE = ALIGNEMENT_HOSTILE,
 	FACTION_TERRAGOV_REBEL = ALIGNEMENT_HOSTILE,
 ))
 

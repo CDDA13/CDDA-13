@@ -29,11 +29,11 @@
 	return
 
 /obj/screen/text/lobby/title
-	maptext = "<span class=menutitle>Welcome to TGMC</span>"
+	maptext = "<span class=menutitle>Welcome to Catacylsm Dark Days Ahead 13</span>"
 
 /obj/screen/text/lobby/title/Initialize()
 	. = ..()
-	maptext = "<span class=menutitle>Welcome to TGMC[SSmapping?.configs ? " - [SSmapping.configs[SHIP_MAP].map_name]" : ""]</span>"
+	maptext = "<span class=menutitle>Welcome to CDDA 13[SSmapping?.configs ? " - [SSmapping.configs[SHIP_MAP].map_name]" : ""]</span>"
 
 
 INITIALIZE_IMMEDIATE(/obj/screen/text/lobby/year)
