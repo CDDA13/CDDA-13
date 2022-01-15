@@ -1,10 +1,12 @@
 /datum/component/crafting
-	var/cur_category = CAT_NONE
-	var/list/categories = list(CAT_NONE)
+	var/cur_category = CAT_MISC
+	var/list/categories = list(CAT_MISC)
 	var/display_craftable_only = FALSE
 
 /datum/component/crafting/Initialize()
 	if(ismob(parent))
+		for(var/datum/crafting_recipe/recipe in GLOB.always_available_recipes)
+			categories |= recipe.category
 		var/mob/mob = parent
 		RegisterSignal(parent, COMSIG_MOB_LOGIN, .proc/create_mob_button)
 		RegisterSignal(mob.mind, COMSIG_ADD_NEW_CATEGORY, .proc/add_new_category)
@@ -38,17 +40,34 @@
 		ui = new(user, src, "PersonalCrafting", "Crafting Menu")
 		ui.open()
 
+/datum/component/crafting/ui_assets(mob/user)
+	return list(get_asset_datum(/datum/asset/spritesheet/crafting_buttons))
+
 /datum/component/crafting/ui_data(mob/user)
 	var/list/data = list()
 	var/mob/parent_mob = parent
 
-	data["categories"] = categories
 	data["category"] = cur_category
+	data["categories"] = categories
 
-	var/list/recipes = list()
-	for(var/datum/crafting_recipe/recipe in parent_mob.mind.learned_recipes)
+	data["recipes"] = list()
+	for(var/datum/crafting_recipe/recipe as anything in parent_mob.mind.learned_recipes)
 		if(cur_category == recipe.category)
-			recipes += list(list("name"=recipe.name, "id"=REF(recipe), "desc"=recipe.desc, "steps"=recipe.steps))
+			data["recipes"] += list(list(
+				"name"=recipe.name,
+				"id"=REF(recipe),
+				"desc"=recipe.desc,
+				"button_icon"=replacetext("[recipe.base_item]", "/", "_"),
+				"steps"=recipe.get_examine_text(1)))
+
+	for(var/datum/crafting_recipe/recipe as anything in GLOB.always_available_recipes)
+		if(cur_category == recipe.category)
+			data["recipes"] += list(list(
+				"name"=recipe.name,
+				"id"=REF(recipe),
+				"desc"=recipe.desc,
+				"button_icon"=replacetext("[recipe.base_item]", "/", "_"),
+				"steps"=recipe.get_examine_text(1)))
 
 	return data
 
@@ -62,10 +81,10 @@
 	if(.)
 		return
 	switch(action)
-		if("make")
-
-		if("toggle_recipes")
-
-		if("toggle_compact")
-
 		if("set_category")
+			if(params["category"] in categories)
+				cur_category = params["category"]
+				.=TRUE
+
+		if("start_recipe")
+			.=TRUE

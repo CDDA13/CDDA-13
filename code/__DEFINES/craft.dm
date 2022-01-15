@@ -2,6 +2,9 @@
 #define CRAFT_ITEM "item"
 #define CRAFT_TOOL "tool"
 #define CRAFT_CRAFTING_QUALITY "crafting_quality"
+#define CRAFT_REAGENT "reagent"
 
-#define CAT_NONE "None"
 #define CAT_MISC "Misc"
+#define CAT_FOOD "Food"
+#define CAT_AMMUNITION "Ammunition"
+#define CAT_WEAPONS "Weapons"

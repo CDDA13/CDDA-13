@@ -7,9 +7,11 @@
 	if(!istype(parent, /obj))
 		return COMPONENT_INCOMPATIBLE
 
-	for(var/path in GLOB.simple_recipes)
-		if(istype(parent, path))
-			simple_recipes |= GLOB.simple_recipes[path]
+	for(var/base_item in GLOB.sorted_crafting_recipes)
+		if(istype(parent, base_item))
+			var/datum/crafting_recipe/recipe = GLOB.sorted_crafting_recipes[base_item]
+			if(recipe.is_simple)
+				simple_recipes |= recipe
 
 	if(simple_recipes.len)
 		RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, .proc/handle_simple_recipes)
@@ -51,6 +53,11 @@
 				qdel(item)
 				.=TRUE
 
+		if(CRAFT_REAGENT)
+			if(do_after(user, step_result[2], TRUE, parent))
+				if(item.reagents.remove_reagent(step_result[3], step_result[4]))
+					.=TRUE
+
 		if(CRAFT_MATERIAL)
 			if(do_after(user, step_result[2], TRUE, parent))
 				var/obj/item/stack/stack = item
@@ -84,7 +91,7 @@
 
 /datum/component/crafting_ingridient/proc/handle_simple_recipes(datum/source, obj/item/item, mob/user, params)
 	SIGNAL_HANDLER
-	for(var/datum/crafting_recipe/recipe in simple_recipes)
+	for(var/datum/crafting_recipe/recipe as anything in simple_recipes)
 		if(handle_steps(source, item, user, params, recipe))
 			current_recipe = recipe
 			UnregisterSignal(parent, COMSIG_PARENT_ATTACKBY)
@@ -93,4 +100,5 @@
 
 /datum/component/crafting_ingridient/proc/on_examine(datum/source, mob/user)
 	SIGNAL_HANDLER
-	to_chat(user, "test test")
+	if(current_recipe)
+		to_chat(user, current_recipe.get_examine_text(current_step))

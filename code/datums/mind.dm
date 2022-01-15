@@ -44,7 +44,6 @@
 
 /datum/mind/New(key)
 	src.key = key
-	learned_recipes = GLOB.always_available_recipes
 
 
 /datum/mind/Destroy(force, ...)
