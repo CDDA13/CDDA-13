@@ -41,7 +41,10 @@
 		ui.open()
 
 /datum/component/crafting/ui_assets(mob/user)
-	return list(get_asset_datum(/datum/asset/spritesheet/crafting_buttons))
+	return list(
+		get_asset_datum(/datum/asset/spritesheet/crafting_buttons),
+		get_asset_datum(/datum/asset/spritesheet/recipe_icons)
+		)
 
 /datum/component/crafting/ui_data(mob/user)
 	var/list/data = list()
@@ -50,23 +53,23 @@
 	data["category"] = cur_category
 	data["categories"] = categories
 
-	data["recipes"] = list()
+	data["_recipes"] = list()
 	for(var/datum/crafting_recipe/recipe as anything in parent_mob.mind.learned_recipes)
 		if(cur_category == recipe.category)
-			data["recipes"] += list(list(
+			data["_recipes"] += list(list(
 				"name"=recipe.name,
 				"id"=REF(recipe),
 				"desc"=recipe.desc,
-				"button_icon"=replacetext("[recipe.base_item]", "/", "_"),
+				"button_icon"=replacetext("[recipe.result]", "/", "_"),
 				"steps"=recipe.get_examine_text(1)))
 
 	for(var/datum/crafting_recipe/recipe as anything in GLOB.always_available_recipes)
 		if(cur_category == recipe.category)
-			data["recipes"] += list(list(
+			data["_recipes"] += list(list(
 				"name"=recipe.name,
 				"id"=REF(recipe),
 				"desc"=recipe.desc,
-				"button_icon"=replacetext("[recipe.base_item]", "/", "_"),
+				"button_icon"=replacetext("[recipe.result]", "/", "_"),
 				"steps"=recipe.get_examine_text(1)))
 
 	return data

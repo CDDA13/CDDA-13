@@ -1,4 +1,5 @@
 /datum/crafting_recipe
+	// Shouldn't be longer then 24 characters
 	var/name
 	var/desc
 	var/category = CAT_MISC
@@ -49,14 +50,30 @@
 					return list(step[1], step[3], step[4])
 
 /datum/crafting_recipe/proc/get_examine_text()
-	return "test test"
+	. = list()
+	for(var/step in steps)
+		switch(step[1])
+			if(CRAFT_ITEM)
+				. += ""
+
+			if(CRAFT_TOOL)
+				. += ""
+
+			if(CRAFT_CRAFTING_QUALITY)
+				. += ""
+
+			if(CRAFT_REAGENT)
+				. += ""
+
+			if(CRAFT_MATERIAL)
+				. += ""
 
 /datum/crafting_recipe/test1
 	name = "First testing recipe"
 	desc = "very stesty"
 	category = CAT_MISC
 	base_item = /obj/item/mass_spectrometer
-	result = /obj/item/megaphone
+	result = /obj/item/mass_spectrometer/adv
 	is_simple = TRUE
 	always_available = TRUE
 	steps = list(
@@ -64,7 +81,7 @@
 		list(CRAFT_ITEM, /obj/item/defibrillator, 5),
 		list(CRAFT_TOOL, TOOL_SCREWDRIVER, 7, 0, 6),
 		list(CRAFT_CRAFTING_QUALITY, CRAFTING_QUALITY_STICK, 7, 1),
-		list(CRAFT_REAGENT, /datum/reagent/lube, 3, 10)
+		list(CRAFT_REAGENT, /datum/reagent/medicine/bicaridine, 3, 10)
 	)
 
 /datum/crafting_recipe/test2
@@ -72,7 +89,7 @@
 	desc = "very stesty"
 	category = CAT_FOOD
 	base_item = /obj/item/autopsy_scanner
-	result = /obj/item/megaphone
+	result = /obj/item/camera/oldcamera
 	is_simple = TRUE
 	always_available = TRUE
 	steps = list(
@@ -88,7 +105,7 @@
 	desc = "very stesty"
 	category = CAT_AMMUNITION
 	base_item = /obj/item/multitool
-	result = /obj/item/megaphone
+	result = /obj/item/coin/diamond
 	is_simple = TRUE
 	always_available = TRUE
 	steps = list(
@@ -101,10 +118,10 @@
 
 /datum/crafting_recipe/test4
 	name = "Forth testing recipe"
-	desc = "very stesty"
+	desc = "You're on fire. Stop, drop and roll to put the fire out or move to a vacuum area."
 	category = CAT_WEAPONS
 	base_item = /obj/item/mmi
-	result = /obj/item/megaphone
+	result = /obj/item/t_scanner
 	is_simple = TRUE
 	always_available = TRUE
 	steps = list(
@@ -136,7 +153,7 @@
 	desc = "very stesty"
 	category = CAT_WEAPONS
 	base_item = /obj/item/storage/belt/grenade
-	result = /obj/item/megaphone
+	result = /obj/item/shard/phoron
 	is_simple = TRUE
 	always_available = TRUE
 	steps = list(
