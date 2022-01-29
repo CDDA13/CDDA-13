@@ -10,7 +10,7 @@
 	for(var/base_item in GLOB.sorted_crafting_recipes)
 		if(istype(parent, base_item))
 			for(var/datum/crafting_recipe/recipe as anything in GLOB.sorted_crafting_recipes[base_item])
-				if(recipe.simple)
+				if(recipe.simple && !istype(parent, recipe.result))
 					simple_recipes |= recipe
 
 	if(simple_recipes.len)

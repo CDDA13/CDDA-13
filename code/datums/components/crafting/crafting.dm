@@ -88,5 +88,5 @@
 			var/datum/crafting_recipe/recipe = locate(params["recipe_id"]) in GLOB.crafting_recipes
 			if(recipe)
 				var/atom/atom = usr.get_active_held_item()
-				if(istype(atom, recipe.base_item))
+				if(istype(atom, recipe.base_item) && !istype(atom, recipe.result))
 					SEND_SIGNAL(atom, COMSIG_CRAFTING_RECIPE_START, usr, recipe)

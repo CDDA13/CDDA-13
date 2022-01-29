@@ -66,6 +66,17 @@
 		else
 			req_one_access = GLOB.all_req_one_access[txt_access]
 
+	// If there any recipe requires src = add crafting component
+	var/break_loop
+	for(var/base_item in GLOB.sorted_crafting_recipes)
+		if(istype(src, base_item))
+			for(var/datum/crafting_recipe/recipe in GLOB.sorted_crafting_recipes[base_item])
+				if(!istype(src, recipe.result))
+					AddComponent(/datum/component/crafting_ingridient)
+					break_loop = TRUE
+					break
+		if(break_loop)
+			break
 
 /obj/Destroy()
 	hard_armor = null

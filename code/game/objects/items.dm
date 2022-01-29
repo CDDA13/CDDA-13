@@ -139,11 +139,6 @@
 	if(flags_item_map_variant)
 		update_item_sprites()
 
-	// If there any recipe requires src = add crafting component
-	for(var/base_item in GLOB.sorted_crafting_recipes)
-		if(istype(src, base_item))
-			AddComponent(/datum/component/crafting_ingridient)
-
 /obj/item/Destroy()
 	flags_item &= ~DELONDROP //to avoid infinite loop of unequip, delete, unequip, delete.
 	flags_item &= ~NODROP //so the item is properly unequipped if on a mob.

@@ -33,7 +33,7 @@
 
 	var/memory
 
-	var/list/datum/crafting_recipe/learned_recipes
+	var/list/datum/crafting_recipe/learned_recipes = list()
 
 	var/datum/money_account/initial_account
 
