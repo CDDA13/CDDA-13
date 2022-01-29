@@ -43,7 +43,6 @@
 /datum/component/crafting/ui_assets(mob/user)
 	return list(
 		get_asset_datum(/datum/asset/spritesheet/crafting_buttons),
-		get_asset_datum(/datum/asset/spritesheet/recipe_icons)
 		)
 
 /datum/component/crafting/ui_data(mob/user)
@@ -55,27 +54,22 @@
 
 	data["_recipes"] = list()
 	for(var/datum/crafting_recipe/recipe as anything in parent_mob.mind.learned_recipes)
-		if(cur_category == recipe.category)
+		if(cur_category == recipe.category && !recipe.hidden)
 			data["_recipes"] += list(list(
 				"name"=recipe.name,
 				"id"=REF(recipe),
 				"desc"=recipe.desc,
 				"button_icon"=replacetext("[recipe.result]", "/", "_"),
-				"steps"=recipe.get_examine_text(1)))
+				"steps"=recipe.get_examine_text(0)))
 
 	for(var/datum/crafting_recipe/recipe as anything in GLOB.always_available_recipes)
-		if(cur_category == recipe.category)
+		if(cur_category == recipe.category && !recipe.hidden)
 			data["_recipes"] += list(list(
 				"name"=recipe.name,
 				"id"=REF(recipe),
 				"desc"=recipe.desc,
 				"button_icon"=replacetext("[recipe.result]", "/", "_"),
-				"steps"=recipe.get_examine_text(1)))
-
-	return data
-
-/datum/component/crafting/ui_static_data(mob/user)
-	var/list/data = list()
+				"steps"=recipe.get_examine_text(0)))
 
 	return data
 
@@ -83,6 +77,7 @@
 	. = ..()
 	if(.)
 		return
+
 	switch(action)
 		if("set_category")
 			if(params["category"] in categories)
@@ -90,4 +85,8 @@
 				.=TRUE
 
 		if("start_recipe")
-			.=TRUE
+			var/datum/crafting_recipe/recipe = locate(params["recipe_id"]) in GLOB.crafting_recipes
+			if(recipe)
+				var/atom/atom = usr.get_active_held_item()
+				if(istype(atom, recipe.base_item))
+					SEND_SIGNAL(atom, COMSIG_CRAFTING_RECIPE_START, usr, recipe)

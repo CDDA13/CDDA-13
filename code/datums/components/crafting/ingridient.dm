@@ -9,16 +9,29 @@
 
 	for(var/base_item in GLOB.sorted_crafting_recipes)
 		if(istype(parent, base_item))
-			var/datum/crafting_recipe/recipe = GLOB.sorted_crafting_recipes[base_item]
-			if(recipe.is_simple)
-				simple_recipes |= recipe
+			for(var/datum/crafting_recipe/recipe as anything in GLOB.sorted_crafting_recipes[base_item])
+				if(recipe.simple)
+					simple_recipes |= recipe
 
 	if(simple_recipes.len)
 		RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, .proc/handle_simple_recipes)
 
 	RegisterSignal(parent, COMSIG_PARENT_EXAMINE, .proc/on_examine)
+	RegisterSignal(parent, COMSIG_CRAFTING_RECIPE_START, .proc/_start_recipe)
 
-/datum/component/crafting_ingridient/proc/handle_steps(datum/source, obj/item/item, mob/user, params, datum/crafting_recipe/recipe)
+//Wrapper proc, we cant sleep here
+/datum/component/crafting_ingridient/proc/_start_recipe(datum/source, mob/user, datum/crafting_recipe/recipe)
+	SIGNAL_HANDLER
+	if(recipe.always_available || (recipe in user.mind.learned_recipes))
+		if(istype(parent, recipe.base_item))
+			INVOKE_ASYNC(src, .proc/start_recipe, user, recipe)
+
+/datum/component/crafting_ingridient/proc/start_recipe(mob/user, datum/crafting_recipe/recipe)
+	if(do_after(user, 2 SECONDS, TRUE, parent))
+		current_recipe = recipe
+		current_step = 1
+
+/datum/component/crafting_ingridient/proc/handle_steps(datum/source, obj/item/item, mob/user, datum/crafting_recipe/recipe)
 	SIGNAL_HANDLER
 	if(!recipe)
 		if(!current_recipe)
@@ -89,16 +102,18 @@
 				new recipe.result(parent_turf)
 			qdel(parent)
 
-/datum/component/crafting_ingridient/proc/handle_simple_recipes(datum/source, obj/item/item, mob/user, params)
+/datum/component/crafting_ingridient/proc/handle_simple_recipes(datum/source, obj/item/item, mob/user)
 	SIGNAL_HANDLER
 	for(var/datum/crafting_recipe/recipe as anything in simple_recipes)
-		if(handle_steps(source, item, user, params, recipe))
-			current_recipe = recipe
-			UnregisterSignal(parent, COMSIG_PARENT_ATTACKBY)
-			RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, .proc/handle_steps)
-			break
+		if(recipe.always_available || (recipe in user.mind.learned_recipes))
+			if(handle_steps(source, item, user, recipe))
+				current_recipe = recipe
+				UnregisterSignal(parent, COMSIG_PARENT_ATTACKBY)
+				RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, .proc/handle_steps)
+				break
 
 /datum/component/crafting_ingridient/proc/on_examine(datum/source, mob/user)
 	SIGNAL_HANDLER
 	if(current_recipe)
-		to_chat(user, current_recipe.get_examine_text(current_step))
+		for(var/step_desc in current_recipe.get_examine_text(current_step))
+			to_chat(user, step_desc)

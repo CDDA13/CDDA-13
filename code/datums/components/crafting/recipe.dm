@@ -16,7 +16,8 @@
 	//		CRAFT_CRAFTING_QUALITY: quality level
 	//		CRAFT_REAGENT: amount of reagents
 	var/list/list/steps
-	var/is_simple
+	var/simple
+	var/hidden
 
 /datum/crafting_recipe/New()
 	.=..()
@@ -49,24 +50,30 @@
 				if(stack.amount >= step[4])
 					return list(step[1], step[3], step[4])
 
-/datum/crafting_recipe/proc/get_examine_text()
+/datum/crafting_recipe/proc/get_examine_text(current_step)
 	. = list()
-	for(var/step in steps)
+	if(!current_step)
+		. += list("[capitalize(initial(base_item.name))] is required to start the recipe")
+	var/list/steps_to_check = steps.Copy(current_step)
+	for(var/step in steps_to_check)
 		switch(step[1])
 			if(CRAFT_ITEM)
-				. += ""
+				var/atom/object = step[2]
+				. += "Apply [initial(object.name)] to continue"
 
 			if(CRAFT_TOOL)
-				. += ""
+				. += "Apply tool with [step[2]] quality to continue"
 
 			if(CRAFT_CRAFTING_QUALITY)
-				. += ""
+				. += "Apply [GLOB.crafting_qualities_names[step[2]][step[4]]] [step[2]] quality to continue"
 
 			if(CRAFT_REAGENT)
-				. += ""
+				var/datum/reagent/reagent = step[2]
+				. += "Apply [step[4]]u of [initial(reagent.name)] to continue"
 
 			if(CRAFT_MATERIAL)
-				. += ""
+				var/obj/item/stack/stack = step[2]
+				. += "Apply [step[4]] [initial(stack.name)] to continue"
 
 /datum/crafting_recipe/test1
 	name = "First testing recipe"
@@ -74,7 +81,7 @@
 	category = CAT_MISC
 	base_item = /obj/item/mass_spectrometer
 	result = /obj/item/mass_spectrometer/adv
-	is_simple = TRUE
+	simple = TRUE
 	always_available = TRUE
 	steps = list(
 		list(CRAFT_MATERIAL, /obj/item/stack/sheet/glass, 10, 2),
@@ -90,14 +97,14 @@
 	category = CAT_FOOD
 	base_item = /obj/item/autopsy_scanner
 	result = /obj/item/camera/oldcamera
-	is_simple = TRUE
+	simple = TRUE
 	always_available = TRUE
 	steps = list(
 		list(CRAFT_MATERIAL, /obj/item/stack/sheet/glass, 10, 2),
 		list(CRAFT_ITEM, /obj/item/defibrillator, 5),
 		list(CRAFT_TOOL, TOOL_SCREWDRIVER, 7, 0, 6),
 		list(CRAFT_CRAFTING_QUALITY, CRAFTING_QUALITY_STICK, 7, 1),
-		list(CRAFT_REAGENT, /datum/reagent/lube, 3, 10)
+		list(CRAFT_REAGENT, /datum/reagent/toxin, 3, 10)
 	)
 
 /datum/crafting_recipe/test3
@@ -106,7 +113,7 @@
 	category = CAT_AMMUNITION
 	base_item = /obj/item/multitool
 	result = /obj/item/coin/diamond
-	is_simple = TRUE
+	simple = TRUE
 	always_available = TRUE
 	steps = list(
 		list(CRAFT_MATERIAL, /obj/item/stack/sheet/glass, 10, 2),
@@ -122,7 +129,7 @@
 	category = CAT_WEAPONS
 	base_item = /obj/item/mmi
 	result = /obj/item/t_scanner
-	is_simple = TRUE
+	simple = TRUE
 	always_available = TRUE
 	steps = list(
 		list(CRAFT_MATERIAL, /obj/item/stack/sheet/glass, 10, 2),
@@ -138,7 +145,7 @@
 	category = CAT_WEAPONS
 	base_item = /obj/item/detective_scanner
 	result = /obj/item/megaphone
-	is_simple = TRUE
+	simple = TRUE
 	always_available = TRUE
 	steps = list(
 		list(CRAFT_MATERIAL, /obj/item/stack/sheet/glass, 10, 2),
@@ -154,7 +161,7 @@
 	category = CAT_WEAPONS
 	base_item = /obj/item/storage/belt/grenade
 	result = /obj/item/shard/phoron
-	is_simple = TRUE
+	simple = TRUE
 	always_available = TRUE
 	steps = list(
 		list(CRAFT_MATERIAL, /obj/item/stack/sheet/glass, 10, 2),

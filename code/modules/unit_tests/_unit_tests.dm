@@ -41,6 +41,7 @@
 #include "binary_insert.dm"
 #include "component_tests.dm"
 #include "connect_loc.dm"
+#include "crafting.dm"
 #include "initialize_sanity.dm"
 #include "keybinding_init.dm"
 #include "spawn_guns.dm"

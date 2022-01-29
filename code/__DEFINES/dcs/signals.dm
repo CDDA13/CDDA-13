@@ -759,3 +759,4 @@
 
 //Signals for crafting
 #define COMSIG_ADD_NEW_CATEGORY "add_new_category"
+#define COMSIG_CRAFTING_RECIPE_START "start_new_recipe"
