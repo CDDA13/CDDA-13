@@ -109,6 +109,8 @@
 
 	var/flags_item_map_variant = NONE
 
+	var/list/crafting_qualities
+
 	//TOOL RELATED VARS
 	var/tool_behaviour = FALSE
 	var/toolspeed = 1
@@ -136,7 +138,6 @@
 
 	if(flags_item_map_variant)
 		update_item_sprites()
-
 
 /obj/item/Destroy()
 	flags_item &= ~DELONDROP //to avoid infinite loop of unequip, delete, unequip, delete.

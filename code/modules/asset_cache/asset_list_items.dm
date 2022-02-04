@@ -130,3 +130,30 @@
 /datum/asset/spritesheet/blessingmenu/register()
 	InsertAll("", 'icons/UI_Icons/buyable_icons.dmi')
 	..()
+
+// 32x32
+/datum/asset/spritesheet/crafting_buttons
+	name = "crafting_buttons"
+
+/datum/asset/spritesheet/crafting_buttons/register()
+	var/list/atoms = list()
+	for(var/datum/crafting_recipe/recipe as anything in GLOB.crafting_recipes)
+		atoms |= recipe.result
+	for(var/atom/atom as anything in atoms)
+		var/icon/icon = icon(initial(atom.icon), initial(atom.icon_state))
+		Insert(replacetext("button_small[atom]", "/", "_"), icon)
+	..()
+
+// 96x96
+/datum/asset/spritesheet/crafting_buttons
+	name = "crafting_buttons"
+
+/datum/asset/spritesheet/crafting_buttons/register()
+	var/list/atoms = list()
+	for(var/datum/crafting_recipe/recipe as anything in GLOB.crafting_recipes)
+		atoms |= recipe.result
+	for(var/atom/atom as anything in atoms)
+		var/icon/icon = icon(initial(atom.icon), initial(atom.icon_state))
+		icon.Scale(96, 96)
+		Insert(replacetext("button[atom]", "/", "_"), icon)
+	..()

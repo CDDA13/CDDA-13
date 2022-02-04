@@ -1,0 +1,23 @@
+// Test that ensures all recipes work
+/datum/unit_test/crafting_recipe/Run()
+	for(var/type in subtypesof(/datum/crafting_recipe))
+		var/datum/crafting_recipe/recipe = new type
+		if(!recipe.hidden && !recipe.name)
+			Fail("[recipe.type] has no name.")
+		if(!recipe.category)
+			Fail("[recipe.type] has no category.")
+		if(recipe.hidden && !recipe.simple)
+			Fail("[recipe.type] isn't simple while hidden.")
+		if(!ispath(recipe.base_item, /obj))
+			Fail("[recipe.type] base object isn't defined or is not subtype of /obj.")
+		if(!ispath(recipe.result, /obj))
+			Fail("[recipe.type] result object isn't defined or is not subtype of /obj.")
+		if(!recipe.steps?.len && recipe.simple)
+			Fail("[recipe.type] is simple recipe with no steps.")
+		if(islist(recipe.steps))
+			for(var/list/step in recipe.steps)
+				if(!islist(step))
+					Fail("[recipe.type] one of the steps isnt a list.")
+		else
+			Fail("[recipe.type] steps are not a list.")
+		qdel(recipe)

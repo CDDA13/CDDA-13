@@ -165,6 +165,8 @@
 
 #define isitemstack(A) (istype(A, /obj/item/stack))
 
+#define issheetstack(A) (istype(A, /obj/item/stack/sheet))
+
 #define issuitwithstorage(A) (istype(A, /obj/item/clothing/suit/storage))
 
 #define isuniform(A) (istype(A, /obj/item/clothing/under))

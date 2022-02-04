@@ -45,6 +45,7 @@
 	RegisterSignal(src, COMSIG_KB_GIVE, .proc/give_signal_handler)
 	AddComponent(/datum/component/footstep, FOOTSTEP_MOB_HUMAN)
 	AddComponent(/datum/component/bump_attack, FALSE, FALSE)
+	AddComponent(/datum/component/crafting)
 	AddElement(/datum/element/ridable, /datum/component/riding/creature/human)
 
 /mob/living/carbon/human/proc/human_z_changed(datum/source, old_z, new_z)

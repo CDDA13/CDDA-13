@@ -154,6 +154,9 @@ GLOBAL_LIST_EMPTY(randomized_pill_icons)
 		var/datum/namepool/NP = new path
 		GLOB.namepool[path] = NP
 
+	for(var/recipe in subtypesof(/datum/crafting_recipe))
+		GLOB.crafting_recipes += new recipe
+
 	return TRUE
 
 

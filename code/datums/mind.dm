@@ -33,6 +33,8 @@
 
 	var/memory
 
+	var/list/datum/crafting_recipe/learned_recipes = list()
+
 	var/datum/money_account/initial_account
 
 	var/last_death = 0
@@ -93,6 +95,10 @@
 
 	recipient << browse(output, "window=memory")
 
+//Use this proc instead of adding new recipes directly into learned_recipes
+/datum/mind/proc/learn_recipe(datum/crafting_recipe/recipe)
+	learned_recipes |= recipe
+	SEND_SIGNAL(src, COMSIG_ADD_NEW_CATEGORY, recipe.category)
 
 /mob/proc/mind_initialize()
 	if(mind)
