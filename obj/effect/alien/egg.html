@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;effect&#x2F;alien&#x2F;egg - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/effect/alien/egg.html#var">Var Details</a> - <a href="obj/effect/alien/egg.html#proc">Proc Details</a></header>
+<main>
+<h1>egg <aside>/<a href="obj.html">obj</a>/<a href="obj/effect/alien.html">effect/alien</a>/<a href="obj/effect/alien/egg.html">egg</a></aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/mob/living/carbon/xenomorph/egg.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;egg.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/effect/alien/egg.html#var/hivenumber">hivenumber</a></th><td>Which hive it belongs to</td></tr>
+            <tr><th><a href="obj/effect/alien/egg.html#var/maturity_stage">maturity_stage</a></th><td>What maturity stage are we in</td></tr>
+            <tr><th><a href="obj/effect/alien/egg.html#var/maturity_time">maturity_time</a></th><td>Time between two maturity stages</td></tr>
+            <tr><th><a href="obj/effect/alien/egg.html#var/stage_ready_to_burst">stage_ready_to_burst</a></th><td>Number of the last maturity stage before bursting</td></tr>
+            <tr><th><a href="obj/effect/alien/egg.html#var/trigger_size">trigger_size</a></th><td>How far will targets trigger the burst</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/effect/alien/egg.html#proc/advance_maturity">advance_maturity</a></th><td>Advance the maturity state by one, or set it to maturity</td></tr>
+            <tr><th><a href="obj/effect/alien/egg.html#proc/burst">burst</a></th><td>Bursts the egg.</td></tr>
+            <tr><th><a href="obj/effect/alien/egg.html#proc/enemy_crossed">enemy_crossed</a></th><td>Signal handler to check if the atom moving nearby is an enemy</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/hivenumber"><aside class="declaration">var </aside>hivenumber
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/mob/living/carbon/xenomorph/egg.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;egg.dm 13"/></a></h3>
+        <p>Which hive it belongs to</p><h3 id="var/maturity_stage"><aside class="declaration">var </aside>maturity_stage
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/mob/living/carbon/xenomorph/egg.dm#L7">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;egg.dm 7"/></a></h3>
+        <p>What maturity stage are we in</p><h3 id="var/maturity_time"><aside class="declaration">var </aside>maturity_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/mob/living/carbon/xenomorph/egg.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;egg.dm 9"/></a></h3>
+        <p>Time between two maturity stages</p><h3 id="var/stage_ready_to_burst"><aside class="declaration">var </aside>stage_ready_to_burst
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/mob/living/carbon/xenomorph/egg.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;egg.dm 11"/></a></h3>
+        <p>Number of the last maturity stage before bursting</p><h3 id="var/trigger_size"><aside class="declaration">var </aside>trigger_size
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/mob/living/carbon/xenomorph/egg.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;egg.dm 15"/></a></h3>
+        <p>How far will targets trigger the burst</p><h2 id="proc">Proc Details</h2><h3 id="proc/advance_maturity"><aside class="declaration">proc </aside>advance_maturity<aside>(maturity) 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/mob/living/carbon/xenomorph/egg.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;egg.dm 26"/></a></aside>
+        </h3>
+        <p>Advance the maturity state by one, or set it to maturity</p><h3 id="proc/burst"><aside class="declaration">proc </aside>burst<aside>(kill) 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/mob/living/carbon/xenomorph/egg.dm#L38">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;egg.dm 38"/></a></aside>
+        </h3>
+        <p>Bursts the egg.</p><h3 id="proc/enemy_crossed"><aside class="declaration">proc </aside>enemy_crossed<aside>(/<a href="datum.html">datum</a>/source, /<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/entered) 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/mob/living/carbon/xenomorph/egg.dm#L48">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;egg.dm 48"/></a></aside>
+        </h3>
+        <p>Signal handler to check if the atom moving nearby is an enemy</p></main>
+<footer>
+    cdda13.dme
+    <a href="https://github.com/CDDA13/CDDA-13/tree/ad3a4aadc9beb08761bc96db2be368c290fc394f">ad3a4aa</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

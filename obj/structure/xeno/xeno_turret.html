@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;structure&#x2F;xeno&#x2F;xeno_turret - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/structure/xeno/xeno_turret.html#var">Var Details</a> - <a href="obj/structure/xeno/xeno_turret.html#proc">Proc Details</a></header>
+<main>
+<h1>xeno_turret <aside>/<a href="obj.html">obj</a>/<a href="obj/structure/xeno.html">structure/xeno</a>/<a href="obj/structure/xeno/xeno_turret.html">xeno_turret</a></aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L841">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 841"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#var/ammo">ammo</a></th><td>What kind of spit it uses</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#var/associated_hive">associated_hive</a></th><td>The hive it belongs to</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#var/firerate">firerate</a></th><td>Fire rate of the target in ticks</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#var/hostile">hostile</a></th><td>Target of the turret</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#var/last_hostile">last_hostile</a></th><td>Last target of the turret</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#var/last_scan_time">last_scan_time</a></th><td>The last time the sentry did a scan</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#var/light_initial_color">light_initial_color</a></th><td>light color that gets set in initialize</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#var/potential_hostiles">potential_hostiles</a></th><td>Potential list of targets found by scan</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#var/range">range</a></th><td>Range of the turret</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#proc/destroy_on_hijack">destroy_on_hijack</a></th><td>Signal handler to delete the turret when the alamo is hijacked</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#proc/get_target">get_target</a></th><td>Look for the closest human in range and in light of sight. If no human is in range, will look for xenos of other hives</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#proc/scan">scan</a></th><td>Return TRUE if a possible target is near</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#proc/set_hostile">set_hostile</a></th><td>Setter for hostile with hard del in mind</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#proc/set_last_hostile">set_last_hostile</a></th><td>Setter for last_hostile with hard del in mind</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#proc/shoot">shoot</a></th><td>Signal handler to make the turret shoot at its target</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#proc/unset_hostile">unset_hostile</a></th><td>Signal handler for hard del of hostile</td></tr>
+            <tr><th><a href="obj/structure/xeno/xeno_turret.html#proc/unset_last_hostile">unset_last_hostile</a></th><td>Signal handler for hard del of last_hostile</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/ammo"><aside class="declaration">var </aside>ammo
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/ammo.html">ammo</a></aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L857">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 857"/></a></h3>
+        <p>What kind of spit it uses</p><h3 id="var/associated_hive"><aside class="declaration">var </aside>associated_hive
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/hive_status.html">hive_status</a></aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L855">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 855"/></a></h3>
+        <p>The hive it belongs to</p><h3 id="var/firerate"><aside class="declaration">var </aside>firerate
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L867">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 867"/></a></h3>
+        <p>Fire rate of the target in ticks</p><h3 id="var/hostile"><aside class="declaration">var </aside>hostile
+            <aside>&ndash; /<a href="atom.html">atom</a></aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L861">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 861"/></a></h3>
+        <p>Target of the turret</p><h3 id="var/last_hostile"><aside class="declaration">var </aside>last_hostile
+            <aside>&ndash; /<a href="atom.html">atom</a></aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L863">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 863"/></a></h3>
+        <p>Last target of the turret</p><h3 id="var/last_scan_time"><aside class="declaration">var </aside>last_scan_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L869">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 869"/></a></h3>
+        <p>The last time the sentry did a scan</p><h3 id="var/light_initial_color"><aside class="declaration">var </aside>light_initial_color
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L871">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 871"/></a></h3>
+        <p>light color that gets set in initialize</p><h3 id="var/potential_hostiles"><aside class="declaration">var </aside>potential_hostiles
+            <aside>&ndash; /list/atom</aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L865">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 865"/></a></h3>
+        <p>Potential list of targets found by scan</p><h3 id="var/range"><aside class="declaration">var </aside>range
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L859">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 859"/></a></h3>
+        <p>Range of the turret</p><h2 id="proc">Proc Details</h2><h3 id="proc/destroy_on_hijack"><aside class="declaration">proc </aside>destroy_on_hijack<aside>() 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L888">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 888"/></a></aside>
+        </h3>
+        <p>Signal handler to delete the turret when the alamo is hijacked</p><h3 id="proc/get_target"><aside class="declaration">proc </aside>get_target<aside>() 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L999">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 999"/></a></aside>
+        </h3>
+        <p>Look for the closest human in range and in light of sight. If no human is in range, will look for xenos of other hives</p><h3 id="proc/scan"><aside class="declaration">proc </aside>scan<aside>() 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L1037">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 1037"/></a></aside>
+        </h3>
+        <p>Return TRUE if a possible target is near</p><h3 id="proc/set_hostile"><aside class="declaration">proc </aside>set_hostile<aside>(_hostile) 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L987">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 987"/></a></aside>
+        </h3>
+        <p>Setter for hostile with hard del in mind</p><h3 id="proc/set_last_hostile"><aside class="declaration">proc </aside>set_last_hostile<aside>(_last_hostile) 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L993">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 993"/></a></aside>
+        </h3>
+        <p>Setter for last_hostile with hard del in mind</p><h3 id="proc/shoot"><aside class="declaration">proc </aside>shoot<aside>() 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L1057">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 1057"/></a></aside>
+        </h3>
+        <p>Signal handler to make the turret shoot at its target</p><h3 id="proc/unset_hostile"><aside class="declaration">proc </aside>unset_hostile<aside>() 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L977">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 977"/></a></aside>
+        </h3>
+        <p>Signal handler for hard del of hostile</p><h3 id="proc/unset_last_hostile"><aside class="declaration">proc </aside>unset_last_hostile<aside>() 
+        
+    
+            <a href="https://github.com/CDDA13/CDDA-13/blob/ad3a4aadc9beb08761bc96db2be368c290fc394f/code/modules/xenomorph/xeno_structures.dm#L982">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;xenomorph&#x2F;xeno_structures.dm 982"/></a></aside>
+        </h3>
+        <p>Signal handler for hard del of last_hostile</p></main>
+<footer>
+    cdda13.dme
+    <a href="https://github.com/CDDA13/CDDA-13/tree/ad3a4aadc9beb08761bc96db2be368c290fc394f">ad3a4aa</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>
